@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiden input </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <wrapper>
+        <div class="dws-wrapper">
+            <input type="checkbox" name="toggle" id="dws-form" class="toggleform">
+            <div class="dws-container">
+                <label for="dws-form" class="toggleform">Ask a Question</label>
+                <form class="frombox">
+                    <div class="inputbox ">
+                        <lable class="labletext">
+                            Your name
+                        </lable>
+                        <input type="text" class="userinput" required>
+                    </div>
+                    <div class="inputbox ">
+                        <lable class="labletext">
+                            Email
+                        </lable>
+                        <input type="email" class="userinput" required>
+                    </div>
+                    <div class="inputbox ">
+                        <lable class="labletext">
+                            Phone number
+                        </lable>
+                        <input type="phone" class="userinput" required pattern="\d+">
+                    </div>
+                    <div class="inputbox ">
+                        <lable class="labletext">
+                            Message
+                        </lable>
+                        <textarea class="userinput" required></textarea>
+                    </div>
+                    <div class="inputbox">
+                        <input type="checkbox" required>
+                        <lable class="personaldata">
+                            I agree to the processing<br> my
+                            <a href="#">personal data</a>
+                        </lable>
+                    </div>
+                    <input type="submit" value="sand" class="button">
+                </form>
+            </div>
+        </div>
+    </wrapper>
+    <script>
+        $(".userinput").focus(function(){
+            $(this).parent().addClass("focus");
+        }).blur(function(){ if($(this).val()===''){
+            $(this).parent().removeClass("focus");
+        }
+        })
+    </script>
+    
+</body>
+</html>

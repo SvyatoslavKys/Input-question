@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: gray;
+}
+/* .dws-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+.dws-container {
+    width: 350px;
+    overflow: hidden;
+    position: fixed;
+    transform: translateY(530px);
+    bottom: 0;
+    right: 10%;
+    transition: 500ms;
+}
+.dws-container:hover{
+    transform: translateY(510px);
+
+}
+.toggleform:checked ~ .dws-container{
+    transform: translateY(0);
+}
+.toggleform[type="checkbox"]{
+    display: none;
+}
+.frombox {
+    padding: 30px;
+    border: 4px solid #8a36a5;
+    background: white;
+}
+.toggleform{
+    display: block;
+    background: #8a36a5;
+    color: aliceblue;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 10px 0;
+    border-radius: 8px 8px 0 0;
+    width: 85%;
+    cursor: pointer;
+
+}
+
+.inputbox {
+    position: relative;
+    margin: 0 0 20px;
+
+}
+.labletext{
+    font-size: 18px;
+    line-height: 55px;
+    color: #a5a5a5;
+    position: absolute;
+    transition: 500ms;
+}
+.userinput{
+    position: relative;
+    background: transparent;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #575454;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #a5a5a5;
+
+}
+.focus .labletext{
+    transform: translateY(-35px);
+    font-size: 14px;
+    color: #d33e3e;
+}
+textarea.userinput{
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    min-width: 250px;
+    max-width: 300px;
+    margin-top: 12px;
+}
+.personaldata, .personaldata a  {
+    color: #858585;
+
+}
+.personaldata a:hover {
+    color: #8a36a5;
+    text-decoration: none;
+}
+.button{
+    background: #8a36a5;
+    color: aliceblue;
+    width: 45%;
+    height: 35px;
+    font-size: 18px;    
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: 500ms;
+    cursor: pointer;
+}
+.button:hover{
+    background: aliceblue;
+    color: #8a36a5;
+    border: 1px solid #8a36a5;
+}
