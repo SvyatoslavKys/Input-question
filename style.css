@@ -110,3 +110,6 @@ textarea.userinput{
     color: #8a36a5;
     border: 1px solid #8a36a5;
 }
+textarea{
+    resize: none;
+}
